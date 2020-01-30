@@ -14,6 +14,8 @@ repositories {
 dependencies {
     compile 'org.apache.kafka:kafka-streams:2.0.1'
     compile 'org.slf4j:slf4j-log4j12:1.7.25'
+    compile 'com.google.code.gson:gson:2.8.6'
+    compile 'ch.hsr:geohash:1.4.0'
 }
 
 mainClassName = 'kafka.streams.scaling.App'
@@ -33,7 +35,7 @@ docker {
     javaApplication {
         baseImage = 'openjdk:11-jdk'
         maintainer = 'Alexander Gusakovsky "alexandergusakovsky@gmail.com"'
-        tag = 'edu.agus/kafka-streams-scaling/' + project.name.toLowerCase() + ':latest'
+        tag = 'verdas/kafka-streams-scaling/' + project.name.toLowerCase() + ':latest'
         jvmArgs = [ "-Dcom.sun.management.jmxremote.port=5555",
                     "-Dcom.sun.management.jmxremote.authenticate=false",
                     "-Dcom.sun.management.jmxremote.ssl=false"]
