@@ -6,7 +6,7 @@ import org.apache.kafka.common.serialization.Serializer;
 import java.nio.charset.Charset;
 import java.util.Map;
 
-public class HotelDataSerializer implements Serializer {
+public class JoinValueSerializer implements Serializer {
   private static final Charset CHARSET = Charset.forName("UTF-8");
   static private Gson gson = new Gson();
 
